@@ -1,0 +1,19 @@
+{% load fullurl %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Preview</title>
+  </head>
+  <body>
+    <p>{{ link.id }}</p>
+    <p>{{ link.title }}</p>
+    <p>{{ link.description }}</p>
+    {% if link.image %}
+    <img src="{{ link.image.url }}" />
+    {% endif %}
+    <p>{{ link.destination }}</p>
+    <p>{% fullurl 'link_view' link.id_str %}</p>
+  </body>
+</html>

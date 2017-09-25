@@ -9,6 +9,10 @@ django = "*"
 django-environ = "*"
 whitenoise = "*"
 psycopg2 = "*"
+pillow = "*"
+django-db-file-storage = "*"
+base58 = "*"
+django-fullurl = "*"
 
 
 [dev-packages]

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="refresh" content="0; {{ link.destination }}" />
+
+    <meta name="og:title" content="{{ link.title }}" />
+    {% if link.image %}
+    <meta name="og:image" content="{{ link.image.url }}" />
+    {% endif %}
+    <meta name="og:description" content="{{ link.description }}" />
+
+    {% if link.image %}
+    <meta name="twitter:card" content="summary_large_image" />
+    {% else %}
+    <meta name="twitter:card" content="summary" />
+    {% endif %}
+    <meta name="twitter:title" content="{{ link.title }}" />
+    <meta name="twitter:description" content="{{ link.description }}" />
+    {% if link.image %}
+    <meta name="twitter:image" content="{{ link.image.url }}" />
+    {% endif %}
+    <title>Link_view</title>
+  </head>
+  <body>
+
+  </body>
+</html>
