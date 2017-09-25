@@ -8,7 +8,10 @@
 
     <meta name="og:title" content="{{ link.title }}" />
     {% if link.image %}
-    <meta name="og:image" content="{% fullurl 'db_file_storage.get_file' %}?name={{ link.image.url }}" />
+    <meta name="og:type" content="image" />
+    <meta name="og:image" content="{% fullurl 'db_file_storage.get_file' %}?name={{ link.image.name }}" />
+    {% else %}
+    <meta name="og:type" content="website" />
     {% endif %}
     <meta name="og:description" content="{{ link.description }}" />
 
@@ -20,7 +23,7 @@
     <meta name="twitter:title" content="{{ link.title }}" />
     <meta name="twitter:description" content="{{ link.description }}" />
     {% if link.image %}
-    <meta name="twitter:image" content="{% fullurl 'db_file_storage.get_file' %}?name={{ link.image.url }}" />
+    <meta name="twitter:image" content="{% fullurl 'db_file_storage.get_file' %}?name={{ link.image.name }}" />
     {% endif %}
     <title>Link_view</title>
   </head>
