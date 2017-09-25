@@ -57,6 +57,7 @@ jobs:
           name: Deploy to dokku
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              ssh-keyscan -H kjwon15.net >> ~/.ssh/known_hosts
               git push dokku@kjwon15.net:rickroll master
             fi
 
