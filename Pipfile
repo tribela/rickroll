@@ -13,6 +13,7 @@ pillow = "*"
 django-db-file-storage = "*"
 base58 = "*"
 django-fullurl = "*"
+uwsgi = "*"
 
 
 [dev-packages]
