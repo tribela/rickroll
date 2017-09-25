@@ -25,9 +25,14 @@
     {% if link.image %}
     <meta name="twitter:image" content="{% fullurl 'db_file_storage.get_file' %}?name={{ link.image.name }}" />
     {% endif %}
-    <title>Link_view</title>
+    <title>{{ link.title }}</title>
   </head>
   <body>
+    <h1>{{ link.title }}</h1>
+    {% if link.image %}
+    <img src="{{ link.image.url }}" />
+    {% endif %}
+    <p>{{ link.description }}</p>
 
   </body>
 </html>
