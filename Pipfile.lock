@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "57b61b512d1aee774a1cd27276850292f8534c1faec2d9232f137b113ed9fa11"
+            "sha256": "a2e9cf13541b38094e9aa1f067809418fc25595322e9db5a80fb1b678f920db9"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -16,7 +16,7 @@
             "python_version": "3.6",
             "sys_platform": "linux"
         },
-        "pipfile-spec": 3,
+        "pipfile-spec": 6,
         "requires": {
             "python_version": "3.6"
         },
@@ -42,6 +42,20 @@
             ],
             "version": "==1.11.5"
         },
+        "django-appconf": {
+            "hashes": [
+                "sha256:ddab987d14b26731352c01ee69c090a4ebfc9141ed223bef039d79587f22acd9",
+                "sha256:6a4d9aea683b4c224d97ab8ee11ad2d29a37072c0c6c509896dd9857466fb261"
+            ],
+            "version": "==1.0.2"
+        },
+        "django-compressor": {
+            "hashes": [
+                "sha256:7732676cfb9d58498dfb522b036f75f3f253f72ea1345ac036434fdc418c2e57",
+                "sha256:9616570e5b08e92fa9eadc7a1b1b49639cce07ef392fc27c74230ab08075b30f"
+            ],
+            "version": "==2.2"
+        },
         "django-db-file-storage": {
             "hashes": [
                 "sha256:274e86d27c88a774cc588bce7d87563fa4c995e311de7f1bbddf42c955f66a50"
@@ -60,6 +74,30 @@
                 "sha256:f700aadbd8d4c20df5976c1962a21e7eed3697c05394358e51cd26fb4cefb11d"
             ],
             "version": "==0.5"
+        },
+        "django-sass-processor": {
+            "hashes": [
+                "sha256:09a8d9db466c7011a7ca6a61af527c96e13c701eab13e36a4499e29965daa0ad"
+            ],
+            "version": "==0.5.5"
+        },
+        "libsass": {
+            "hashes": [
+                "sha256:f87206f43aeed521b9000796cfc841335c4dbb4651dbfeb915f85bb8deae9f1c",
+                "sha256:6a9f7e2838987a1bf6bd7011401c509ce3d5db602db038eb26fbc23c8e5ef2a2",
+                "sha256:2fd1bb96c39356893200bdb643185ecd091191b90823bf67a70ff0deaee823ee",
+                "sha256:aa5df9c3141dc7f456babe78239829ac5379d4e6a86bed6c1bca389dbe772106",
+                "sha256:35217aecea17efe31aa2a9126708cf2afa198f31f3e6dd9e68ac91e919f62272",
+                "sha256:708bf3c3f874c0c982faf2d838253953b087ffad527cb12de02450dc0d6da81b",
+                "sha256:4dacde0ef2648e4fb2ea95c8b2a0f72fee1b37686db61f8ee422cf41ca0e277d",
+                "sha256:4adf70944e48f969cb8450032f64cd5ffa0d8af697655a7653af3f710f1fa626",
+                "sha256:33d61da0b54834da1021631d22b5de8a8a5bffb5717828d56c1f51feff9835c2",
+                "sha256:859ecb339da09995cbfa140aec441160dc9986e9d84e931f6d94b6113de53e9d",
+                "sha256:cbeb3e217e173a7f444aef7898528d5d3894d95eabc088c5d2a3c18462bfe6cb",
+                "sha256:95b5908827b815b852529b0456e2a465ad19641c0d3a35de6136bbf68d2aad54",
+                "sha256:f6270e6f5eb0bfa4e5ecf5b9e6443f576a6fe47cbb732b8d6acaf396c323ec0a"
+            ],
+            "version": "==0.13.2"
         },
         "olefile": {
             "hashes": [
@@ -168,6 +206,18 @@
                 "sha256:f5c056e8f62d45ba8215e5cb8f50dfccb198b4b9fbea8500674f3443e4689589"
             ],
             "version": "==2017.2"
+        },
+        "rcssmin": {
+            "hashes": [
+                "sha256:ca87b695d3d7864157773a61263e5abb96006e9ff0e021eff90cbe0e1ba18270"
+            ],
+            "version": "==1.0.6"
+        },
+        "rjsmin": {
+            "hashes": [
+                "sha256:dd9591aa73500b08b7db24367f8d32c6470021f39d5ab4e50c7c02e4401386f1"
+            ],
+            "version": "==1.0.12"
         },
         "six": {
             "hashes": [

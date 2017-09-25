@@ -29,6 +29,10 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
+INTERNAL_IPS = [
+    '0.0.0.0',
+    '127.0.0.1',
+]
 ALLOWED_HOSTS = ['*']
 
 
@@ -41,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sass_processor',
     'db_file_storage',
     'fullurl',
     'rickroll',
@@ -126,6 +131,8 @@ public_root = root.path('_site/')
 
 DEFAULT_FILE_STORAGE = 'db_file_storage.storage.DatabaseFileStorage'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+SASS_PROCESSOR_INCLUDE_FILE_PATTERN = r'^.+\.scss$'
 
 SITE_ROOT = root()
 MEDIA_ROOT = public_root('media')

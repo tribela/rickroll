@@ -106,3 +106,6 @@ ENV/
 
 db.sqlite3
 /_site/
+
+# compiled scss
+_*.css

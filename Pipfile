@@ -6,19 +6,20 @@ python_version = "3.6"
 [packages]
 
 django = "*"
-django-environ = "*"
+"django-environ" = "*"
 whitenoise = "*"
-psycopg2 = "*"
+"psycopg2" = "*"
 pillow = "*"
-django-db-file-storage = "*"
-base58 = "*"
-django-fullurl = "*"
+"django-db-file-storage" = "*"
+"base58" = "*"
+"django-fullurl" = "*"
 uwsgi = "*"
+"django-sass-processor" = "*"
+"django-compressor" = "*"
+libsass = "*"
 
 
 [dev-packages]
 
-flake8 = "*"
+"flake8" = "*"
 honcho = "*"
-
-

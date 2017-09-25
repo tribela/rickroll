@@ -1,19 +1,31 @@
+{% load static %}
 {% load fullurl %}
+{% load sass_tags %}
 <!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{% sass_src 'css/_master.scss' %}" media="all" charset="utf-8">
     <title>Preview</title>
   </head>
   <body>
-    <p>{{ link.id }}</p>
-    <p>{{ link.title }}</p>
-    <p>{{ link.description }}</p>
-    {% if link.image %}
-    <img src="{{ link.image.url }}" />
-    {% endif %}
-    <p>{{ link.destination }}</p>
-    <p>{% fullurl 'link_view' link.id_str %}</p>
+    <p>URL: <input readonly value="{% fullurl 'link_view' link.id_str %}" /></p>
+    <p>Destination: {{ link.destination }}</p>
+    <p>
+      Simple preview:
+      <div class="preview">
+        {% if link.image %}
+        <div class="thumbnail">
+          <img src="{{ link.image.url }}" />
+        </div>
+        {% endif %}
+        <div class="content">
+          <h2 class="title">{{ link.title }}</h2>
+          <p class="description">{{ link.description }}</p>
+          <p class="domain">{{ request.META.HTTP_HOST }}</p>
+        </div>
+      </div>
+    </p>
   </body>
 </html>
