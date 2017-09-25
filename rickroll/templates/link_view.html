@@ -1,3 +1,4 @@
+{% load fullurl %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,7 +8,7 @@
 
     <meta name="og:title" content="{{ link.title }}" />
     {% if link.image %}
-    <meta name="og:image" content="{{ link.image.url }}" />
+    <meta name="og:image" content="{% fullurl 'db_file_storage.get_file' %}?name={{ link.image.url }}" />
     {% endif %}
     <meta name="og:description" content="{{ link.description }}" />
 
@@ -19,7 +20,7 @@
     <meta name="twitter:title" content="{{ link.title }}" />
     <meta name="twitter:description" content="{{ link.description }}" />
     {% if link.image %}
-    <meta name="twitter:image" content="{{ link.image.url }}" />
+    <meta name="twitter:image" content="{% fullurl 'db_file_storage.get_file' %}?name={{ link.image.url }}" />
     {% endif %}
     <title>Link_view</title>
   </head>
