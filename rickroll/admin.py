@@ -4,4 +4,4 @@ from .models import Link
 
 # Register your models here.
 
-admin.register(Link)
+admin.site.register(Link)
