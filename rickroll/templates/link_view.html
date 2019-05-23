@@ -10,14 +10,14 @@
     <meta http-equiv="refresh" content="0; {{ link.destination }}" />
     {% endif %}
 
-    <meta name="og:title" content="{{ link.title }}" />
+    <meta property="og:title" content="{{ link.title }}" />
     {% if link.image %}
-    <meta name="og:type" content="image" />
-    <meta name="og:image" content="{% fullurl 'db_file_storage.get_file' %}?name={{ link.image.name }}" />
+    <meta property="og:type" content="image" />
+    <meta property="og:image" content="{% fullurl 'db_file_storage.get_file' %}?name={{ link.image.name }}" />
     {% else %}
-    <meta name="og:type" content="object" />
+    <meta property="og:type" content="object" />
     {% endif %}
-    <meta name="og:description" content="{{ link.description }}" />
+    <meta property="og:description" content="{{ link.description }}" />
 
     {% if link.image %}
     <meta name="twitter:card" content="summary_large_image" />
