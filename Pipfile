@@ -1,10 +1,11 @@
 [[source]]
 url = "https://pypi.python.org/simple"
 verify_ssl = true
+
 [requires]
 python_version = "3.6"
-[packages]
 
+[packages]
 django = "*"
 "django-environ" = "*"
 whitenoise = "*"
@@ -13,13 +14,12 @@ pillow = "*"
 "django-db-file-storage" = ">=0.5.3"
 "base58" = "*"
 "django-fullurl" = "*"
-uwsgi = "*"
 "django-sass-processor" = "*"
 "django-compressor" = "*"
 libsass = "*"
-
+gunicorn = "*"
+gevent = "*"
 
 [dev-packages]
-
 "flake8" = "*"
 honcho = "*"
