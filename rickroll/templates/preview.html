@@ -17,7 +17,7 @@
       <div class="preview">
         {% if link.image %}
         <div class="thumbnail">
-          <img src="{{ link.image.url }}" />
+          <img src="{% url 'db_file_storage.get_file' %}?name={{ link.image.name }}" />
         </div>
         {% endif %}
         <div class="content">

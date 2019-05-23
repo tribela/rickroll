@@ -35,7 +35,7 @@
   <body>
     <h1>{{ link.title }}</h1>
     {% if link.image %}
-    <img src="{{ link.image.url }}" />
+    <img src="{% url 'db_file_storage.get_file' %}?name={{ link.image.name }}" />
     {% endif %}
     <p>{{ link.description }}</p>
 
