@@ -51,6 +51,7 @@ jobs:
           command: |
             . venv/bin/activate
             flake8
+            ./bin/post_compile
             ./manage.py test
 
       - deploy:
