@@ -1,5 +1,6 @@
 import base58
 from django.http import Http404
+from django.views.decorators.cache import cache_page
 from django.shortcuts import get_object_or_404, redirect, render
 
 from .forms import LinkForm
@@ -20,6 +21,7 @@ def create_new(request):
     })
 
 
+@cache_page(24 * 60 * 60)
 def link_view(request, id_str):
     try:
         id_int = base58.b58decode_int(id_str)
@@ -31,6 +33,7 @@ def link_view(request, id_str):
     })
 
 
+@cache_page(24 * 60 * 60)
 def preview(request, id_str):
     try:
         id_int = base58.b58decode_int(id_str)
