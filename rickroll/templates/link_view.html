@@ -11,6 +11,7 @@
     {% endif %}
 
     <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
     <meta property="og:title" content="{{ link.title }}" />
     {% if link.image %}
     <meta property="og:image" content="{% fullurl 'db_file_storage.get_file' %}?name={{ link.image.name }}" />
