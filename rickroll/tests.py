@@ -16,7 +16,7 @@ class RickrollTest(TestCase):
 
     def test_id_str(self):
         link = Link.objects.get(id=1)
-        self.assertIsNotNone(link.id_str)
+        self.assertEqual(link.id_str, '2')
 
     def test_attributes(self):
         link = Link.objects.get(id=1)

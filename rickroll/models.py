@@ -15,7 +15,7 @@ class Link(models.Model):
 
     @property
     def id_str(self):
-        return base58.b58encode_int(self.id)
+        return base58.b58encode_int(self.id).decode('ascii')
 
     def get_absolute_url(self):
         return reverse('link_view', args=[self.id_str])
