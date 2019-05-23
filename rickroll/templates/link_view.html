@@ -10,12 +10,10 @@
     <meta http-equiv="refresh" content="0; {{ link.destination }}" />
     {% endif %}
 
+    <meta property="og:type" content="article" />
     <meta property="og:title" content="{{ link.title }}" />
     {% if link.image %}
-    <meta property="og:type" content="image" />
     <meta property="og:image" content="{% fullurl 'db_file_storage.get_file' %}?name={{ link.image.name }}" />
-    {% else %}
-    <meta property="og:type" content="object" />
     {% endif %}
     <meta property="og:description" content="{{ link.description }}" />
 
